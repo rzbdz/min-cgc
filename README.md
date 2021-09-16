@@ -26,7 +26,7 @@ similar to free() in unix.
 - `void *realloc(void *ptr, size_t size)`
 
 ## performance
-- The cgc_malloc, cgc_free, cgc_realloc test results using CSAPP3e mdriver in malloclab:
+- The `cgc_malloc`, `cgc_free`, `cgc_realloc` test results using CSAPP3e mdriver in malloclab:
     |trace | valid | util  |   ops |     secs | Kops|
     |------|-------|-------|-------|----------|-----|
     | 0    |   yes |  98%  |  5694 | 0.000721 | 7902|
@@ -41,12 +41,12 @@ similar to free() in unix.
     | 9    |   yes |  99%  | 14401 | 0.000365 |39433|
     |10    |   yes |  99%  | 14401 | 0.000211 |68348|
     |Total |  pass |  94%  |112372 | 0.011597 | 9690|
-- The gc performance:. (none, it's very slow)
-- test cgc calls with gc most the time and free in test_many_objects(@see src code): 
+- The garbage collection performance:. (none, it's very slow)
+- test cgc calls with gc most the time and free in `test_many_objects`(@see src code): 
     |throughput|util|
     |----------|----|
     |1106 Kops|88.3%|
-- test cgc calls with test_many_objects(@see src code) keep 20000 objs alive: 
+- test frequent `cgc` calls with `test_many_objects`(@see src code) keep 20,000 objects alive: 
     |throughput|util|
     |----------|----|
     |5 Kops|68.3%|
